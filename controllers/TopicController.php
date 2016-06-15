@@ -12,4 +12,9 @@ use yii\rest\ActiveController;
 class TopicController extends ActiveController
 {
     public $modelClass = 'app\models\Topic';
+
+    public $serializer = [
+        'class' => 'yii\rest\Serializer',
+        'collectionEnvelope' => 'items',
+    ];
 }
